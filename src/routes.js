@@ -6,9 +6,9 @@ const Index = resolve => {
     });
 };
 
-const About = resolve => {
-    require.ensure(['./pages/about.vue'], () => {
-        resolve(require('./pages/about.vue'));
+const Movie = resolve => {
+    require.ensure(['./pages/book.vue'], () => {
+        resolve(require('./pages/book.vue'));
     });
 };
 
@@ -17,8 +17,11 @@ const routers = [{
     name: 'index',
     component: Index
 }, {
-    path: '/testUrl',
-    component: require('./pages/ALL.vue')
+    path: '/movie',
+    component: require('./pages/movie.vue')
+},{
+    path: '/book',
+    component: require('./pages/book.vue')
 },{
     path: '*',
     component: Index

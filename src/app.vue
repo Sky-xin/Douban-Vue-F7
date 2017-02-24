@@ -10,8 +10,8 @@
     <f7-views>
       <f7-view id="main-view" navbar-through :dynamic-navbar="true" main>
         <!-- Navbar -->
-        <f7-navbar>
-          <f7-nav-center sliding>平安银行--保险</f7-nav-center>
+        <f7-navbar >
+          <f7-nav-center >豆瓣</f7-nav-center>
         </f7-navbar>
 
         <!-- Pages -->
@@ -45,14 +45,13 @@
             setTimeout(() => {
                 this.articles = [
                     {
-                        "title": "其他参数",
-                        "url": "/about/",
+                        "title": "我的图书",
+                        "url": "/book/",
                         "flag": false
                     }, {
-                        "title": "首页",
-                        "url": "/testUrl/",
+                        "title": "我的电影",
+                        "url": "/movie/",
                         "flag": false
-
                     }
                 ];
                 this.$http.jsonp('https://api.douban.com/v2/movie/top250?count=10', {}, {
