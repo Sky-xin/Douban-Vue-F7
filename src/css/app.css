@@ -1,3 +1,22 @@
 /* =========
 Your custom styles go here
  ========= */
+.frosted-glass{
+    height: 100%;
+    background: inherit;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -ms-filter: blur(5px);
+    -o-filter: blur(5px);
+    filter: blur(5px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+}
+.infinite-scroll{
+    padding-top: 22px;
+}
+.demo-card-header-pic{
+    width:100%;
+    height:100%;
+    background-repeat: no-repeat;
+    background-size:cover;
+}

@@ -1,6 +1,7 @@
 // Import Vue
 import Vue from 'vue'
-
+//Import Vuex
+import Vuex from 'vuex'
 // Import F7
 import Framework7 from 'framework7'
 
@@ -32,18 +33,32 @@ import routes from './routes';
 import App from './app'
 
 // Init F7 Vue Plugin
-Vue.use(Framework7Vue)
-Vue.use(VueResource)
+Vue.use(Framework7Vue);
+Vue.use(VueResource);
+Vue.use(Vuex);
+
+
+const store = new Vuex.Store({
+    state : {
+        count: 0
+    },
+    mutations:{
+        increment(state){
+            state.count++;
+        }
+    }
+});
 // Init App
 new Vue({
   // Routes,
   el: '#app',
+  store,
   template: '<app/>',
   // Init Framework7 by passing parameters here
   framework7: {
     root: '#app',
     /* Uncomment to enable Material theme: */
-    material: true,
+    // material: true,
     routes: routes,
   },
   // Register App Component
