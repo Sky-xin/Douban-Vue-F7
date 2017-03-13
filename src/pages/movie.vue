@@ -19,7 +19,7 @@
                     </div>
                     <div class="card-footer" style="background-color: #cccccc;opacity:0.7;filter:alpha(opacity=80)">
                         <a :href="article.alt" class="link">Go</a>
-                        <a href="/movie/:111" class="link ">查看详情</a>
+                        <a :href="'/movie/'+article.id" class="link ">查看详情</a>
                     </div>
                 </div>
 
