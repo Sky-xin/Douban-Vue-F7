@@ -15,7 +15,7 @@ Your custom styles go here
     padding-top: 22px;
 }
 .demo-card-header-pic{
-    width:100%;
+    width:auto;
     height:100%;
     background-repeat: no-repeat;
     background-size:cover;

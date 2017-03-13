@@ -20,6 +20,9 @@ const routers = [{
     path: '/movie',
     component: require('./pages/movie.vue')
 },{
+    path: '/movie/:id',
+    component: require('./pages/movie/movie-detail.vue')
+},{
     path: '/book',
     component: require('./pages/book.vue')
 },{
