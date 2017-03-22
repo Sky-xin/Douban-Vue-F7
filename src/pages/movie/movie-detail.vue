@@ -1,5 +1,5 @@
 <template>
-    <f7-page>
+    <f7-page v-cloak>
 
         <f7-navbar :title="movie.title" back-link="Back" sliding></f7-navbar>
         <!--<div class="content-block-title">{{movie.title}}</div>-->
@@ -66,7 +66,7 @@
             },
 
         },
-        mounted: function() {
+        beforeMount: function() {
             console.log(this.$route)
             this.$http.jsonp('https://api.douban.com/v2/movie/subject/'+this.$route.params.id, {}, {
                 headers: {
@@ -95,5 +95,9 @@
         width: 100%;
         background-color: #fff;
         margin-top: 40%;
+    }
+
+    [v-cloak] {
+        display: none;
     }
 </style>

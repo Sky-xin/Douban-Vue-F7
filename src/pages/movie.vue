@@ -67,7 +67,7 @@
         data(){
             return {
                 articles:[],
-                nextArticle:[]
+                nextArticle:[],
             };
         },
         components:{
